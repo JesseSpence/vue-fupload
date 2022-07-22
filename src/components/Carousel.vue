@@ -1,0 +1,62 @@
+<template>
+<div class="outer"> 
+  <div class="Carousel">
+<slot></slot>
+  </div>
+  <button @click="nex" class="nex">Next</button>
+
+<button @click="prev" class="prev">Prev</button>
+</div>
+</template>
+
+<script>
+
+export default {
+    data() {
+
+    },
+    methods: {
+        nex() {
+        this.$emit('nex')
+        },
+     prev() {
+        this.$emit('prev')
+    }
+}
+}
+
+</script>
+
+<style scoped>
+.Carousel{
+    width: 600px;
+    height:800px;
+    overflow:hidden;
+}
+.outer{
+position:relative;
+display: flex;
+justify-content: center;
+width: 100vw;
+height: 100vh;
+}
+button {
+    position: absolute;
+    top: calc(50% + 20px);
+    height: 40px;
+    width: 50px;
+    background-color:rgba(0, 0, 0, 0.822);
+    color:white;
+    border:none;
+}
+button:focus, button:hover {
+    outline:none;
+    cursor:pointer;
+}
+.nex {
+    right:2%
+}
+.prev {
+    left:2%
+}
+</style>
