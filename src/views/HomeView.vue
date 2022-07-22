@@ -13,17 +13,28 @@
     </div>
 
 </div>
-    </section>
+    <div class="color-box">
+        <h3>color changer : </h3>
     <div class="colors">
-        <div>
+        <div class="inputs">
+            <h5> background : </h5>
 <input type="color" v-model="backgroundColor" @change="changeBackgroundColor()">
 </div>
+<div class="inputs">
+    <h5> Lowlight : </h5>
 <input type="color" v-model="highlightColor" @change="changeHighlightColor()">
-<div>
+</div>
+<div class="inputs">
+    <h5> Highlight : </h5>
+<input type="color" v-model="lowlightColor" @change="changeLowlightColor()">
+</div>
+<div class="inputs">
+    <h5> Text : </h5>
 <input type="color" v-model="lowlightColor" @change="changeLowlightColor()">
 </div>
 </div>
-
+</div>
+</section>
 </template>
 
 <script>
@@ -59,13 +70,25 @@ changeLowlightColor() {
 body{
 	text-align:center;
 }
-.colors{
-padding: 5%;
+.color-box{
+   border: 2px solid var(--el-color);
+   height: fit-content; 
+   width:fit-content;
+   margin: 10% auto;
+   display: flex;
+   flex-direction:column;
+   align-items: center;
 }
-input{
-    border-radius: 30%;
+.colors{
+    padding:2%;
+width:40vw;
+display: flex;
+justify-content: space-around;
+}
+
+.inputs{
+    margin:0 5% 0 0;
     z-index: 100000;
-    background-color: pink !important;
 }
 #home{
     text-shadow: 1px 2px 3px var(--el-color);
@@ -122,7 +145,6 @@ h2{
 box-shadow: 1px 1px 5px 2px  var(--text-mute);
 }
 .fa-brands{
-   
     color: var(--text-color);
     transition: 0.5s;
 }

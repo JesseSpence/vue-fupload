@@ -3,9 +3,9 @@
   <div class="Carousel">
 <slot></slot>
   </div>
-  <button @click="nex" class="nex">Next</button>
+  <button @click="nex" class="nex"><i class="fa-solid fa-caret-right"></i></button>
 
-<button @click="prev" class="prev">Prev</button>
+<button @click="prev" class="prev"><i class="fa-solid fa-caret-left"></i></button>
 </div>
 </template>
 
@@ -45,8 +45,8 @@ button {
     top: calc(50% + 20px);
     height: 40px;
     width: 50px;
-    background-color:rgba(0, 0, 0, 0.822);
-    color:white;
+    background-color:var(--el-color);
+    color:var(--text-color);
     border:none;
 }
 button:focus, button:hover {

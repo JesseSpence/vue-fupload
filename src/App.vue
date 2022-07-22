@@ -37,11 +37,9 @@ background-color: var(--background-color) !important;
   min-height: 100vh;
 }
 #app {
-
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
 nav {
   padding: 30px;
@@ -74,8 +72,9 @@ body::-webkit-scrollbar-thumb {
   border: 2px solid var(--text-mute);  /* creates padding around scroll thumb */
 }
 .my-container{
-    overflow: hidden;
+    overflow: hidden !important;
     margin-left:255px;
+    height:fit-content;
     
 }
 
@@ -96,7 +95,7 @@ body::-webkit-scrollbar-thumb {
         background-color: var(--nav-color);
         transition: 0.5s;
     }
-    .my-container{
+    -container{
         margin: 1%;
         transition: 0.4s;
     }

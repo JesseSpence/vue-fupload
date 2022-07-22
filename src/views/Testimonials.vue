@@ -6,7 +6,7 @@
 	>
 	<carousel-slide v-for="(slide,index) in slides" :key="slide" :index="index" :visibleSlide="visibleSlide"> 
 	<img :src="slide.img"/>
-	<div class="slide-page">
+	<div class="slide-page mt-3">
 	<h5>{{ slide.title }}</h5>
 <p>{{ slide.testimonial }}</p>
 	</div>
@@ -92,7 +92,28 @@ export default {
 	
 }
 .slide-page{
+	border:2px solid var(--el-color);
+	padding:5%;
 	background: var(--text-mute);
 	text-align: center;
+	border-radius:20%;
+}
+p{position:relative}
+p::before{
+content:"❝";
+position:absolute;
+left:-5px;
+color:var(--el-color);
+top:-20px;
+}
+p::after{
+content:"❞";
+position:absolute;
+right:10px;
+color:var(--el-color);
+bottom:-15px;
+}
+img{
+	border: 5px solid var(--el-color);
 }
 	</style>
